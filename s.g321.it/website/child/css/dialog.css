@@ -1,0 +1,20 @@
+body{height:100%;margin:0}
+#dialog-modal-content,#dialog-modal-data{display:none}
+
+/* Overlay */
+#dialog-overlay{background-color:#000;cursor:wait;position:fixed !important;}
+
+/* Container */
+#dialog-container{background-color:#eee;color:#000;font-family:"Lucida Grande",Arial,sans-serif !important;font-size:14px;padding-bottom:4px;width:600px;-moz-border-radius-bottomleft:6px;-webkit-border-bottom-left-radius:6px;-moz-border-radius-bottomright:6px;-webkit-border-bottom-right-radius:6px;-moz-box-shadow:0 0 64px #000;-webkit-box-shadow:0 0 64px #000}
+#dialog-container a{color:#ddd}
+#dialog-container #dialog-modal-title{color:#000;background-color:#ddd;border-bottom:1px solid #ccc;font-weight:700;text-shadow:0 1px 0 #f4f4f4;padding:6px 8px}
+#dialog-container .close{display:none;position:absolute;right:0;top:0}
+#dialog-container .close a{display:block;color:#777;font-family:"Lucida Grande",Arial,sans-serif !important;font-size:14px;font-weight:700;text-decoration:none;text-shadow:0 1px 0 #f4f4f4;padding:6px 12px 0}
+#dialog-container .close a:hover{color:#000}
+#dialog-container #dialog-modal-data{padding:6px 12px}
+#dialog-container h2{margin:10px 0 6px}
+#dialog-container p{margin-bottom:10px;clear:both !important}
+#dialog-container #dialog-modal-data div{margin-bottom:10px}
+#dialog-container span{color:#777;font-size:.9em}
+
+#dialog-loading{width:40%;top:30%;left:30%;border:none;background-color:#000;text-align:center;-moz-border-radius:10px;-webkit-border-radius:10px;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);-moz-opacity:.70;opacity:.70;color:#fff;font-size:28px;padding:15px}

@@ -1,0 +1,122 @@
+.treeview{ 
+	padding: 0;
+	margin: 0 auto;
+	list-style: none;
+	width:233px;
+}
+
+.treeview ul {
+ font-weight:bold;
+}
+
+.treeview .hitarea {
+	height: 18px;
+	width: 17px;
+position:absolute; top:9px; left:18px;
+	cursor: pointer;
+}
+/* fix for IE6 */
+* html .hitarea {
+	display: inline;
+	float:none;
+}
+
+.treeview li { 
+	margin: 0;
+	padding:0 0 5px;
+}
+
+.treeview a.selected {
+
+}
+
+#treecontrol { margin: 1em 0; display: none; }
+
+.treeview .hover { color: #000; cursor: pointer; }
+
+.treeview li { position:relative; }/* background: url(images/treeview-default-line.gif) 0 0 no-repeat; }*/
+.treeview li.expandable,
+.treeview-red li ul li.lastExpandable,
+.treeview-red li ul li.lastCollapsable{ }
+.treeview-red li ul li.lastExpandable{ background:url(../images/nav-s.png) no-repeat;}
+.treeview-red li ul li.lastCollapsable{ background:url(../images/nav-s-f.png) no-repeat; color:#000;}
+.treeview-red li ul li{color:#fff;}
+.treeview-red li ul li.lastExpandable span,.treeview-red li ul li.lastCollapsable span{background:none;}
+.treeview-red li ul li span,.treeview-red li ul li.lastCollapsable ul li span{background:url(../images/nav-icon.png) 10px -183px no-repeat; padding:0 0 0 35px;}
+.treeview ul li div.expandable-hitarea{ background-position:-141px -2px;}
+.treeview ul li div.collapsable-hitarea{ background-position:-222px -2px;}
+
+.treeview li.last {}
+.treeview li.lastCollapsable, .treeview li.lastExpandable,.treeview li.collapsable, .treeview-red li.expandable {background:url(../images/nav-f.png) no-repeat;}
+.treeview li.lastExpandable span,
+.treeview li.lastCollapsable span{text-indent:8px;}
+.treeview li.lastCollapsable,.treeview li.lastCollapsable ul li a{ color:#fff;}  
+.treeview li.lastCollapsable ul li.expandable,
+.treeview li.lastCollapsable ul li.collapsable{ }
+
+.treeview li.collapsable li.collapsable { background:url("../images/nav-s-f.png") no-repeat scroll 0 0 transparent;
+color:#000000; }
+.treeview li.collapsable li.expandable { background:url("../images/nav-s.png") no-repeat scroll 0 0 transparent; }
+
+.treeview li.collapsable li.collapsable span, .treeview li.collapsable li.expandable span { background:none; }
+.treeview li.collapsable li.collapsable li span, .treeview li.collapsable li.expandable li span { background:url("../images/nav-icon.png") no-repeat scroll 10px -183px transparent; }
+
+/*.treeview li.lastCollapsable { background-position: 0 -100px;}
+.treeview li.lastExpandable { background-position: 0 -50px }*/
+
+.treeview div.lastCollapsable-hitarea,.treeview div.collapsable-hitarea{ background-position:-58px 0;}
+.treeview div.lastExpandable-hitarea,.treeview div.expandable-hitarea { background-position:-30px 0;}
+
+.treeview-red li{ width:233px; min-height:42px;background:url(../images/nav-f-dis.png) 0 -0 no-repeat;color:#552710;}
+.treeview-red a,.treeview-red li span{font-size:24px; font-weight:bold;}
+.treeview-red a{min-height:42px;_height:42px;}
+.treeview-red li ul li a{font-size:16px; color:#fff;}
+.treeview-red li ul li a{min-height:32px; _height:32px;}
+.treeview-red li ul li a:hover{background:none; color:#000; text-decoration:none;}
+.treeview-red li ul li u.treeview-red li ul li ul li a:hover{text-decoration:underline; color:#fff;}
+{}
+/*.treeview-red li span{ text-indent:43px; display:inline-block;}*/
+
+.treeview-red li.hit_disable{ width:231px; height:40px; background-position:0 0;}/* background-image: url(images/treeview-red-line.gif);*/ 
+.treeview-red li.hit_disable a{color:#552710;  line-height:40px; width:231px; height:40px; display:block; text-indent:43px;}
+.treeview-red .hitarea{ background:url(../images/icon-nav.png);}
+.treeview-red li ul{ width:217px; margin:5px auto 0;}
+.treeview-red li ul li{width:217px; min-height:32px; background:url(../images/nav-s.png) no-repeat; line-height:32px;}
+.treeview-red li ul li span{font-size:16px; width:182px; height:32px;text-indent:0;}
+.treeview-red li ul li span a{background:none; text-indent:0}
+.treeview-red li ul li:hover, .treeview li.collapsable li.expandable:hover {background:url(../images/nav-s-f.png) no-repeat; color:#000;}
+.treeview-red li ul li ul li,.treeview-red li ul li ul li:hover{background:none; color:#fff;}
+.treeview-red li ul li ul li span,.treeview-red li ul li ul li span a{ font-size:16px;}
+
+.treeview-red li span{ display:block; width:200px; height:42px; padding:0 0 0 33px;text-indent:-9999px; font-size:0;}
+.treeview-red li span a{display:block;background:url(../images/title.png) no-repeat; text-indent:-9999px;}
+.treeview-red li span a.n_all{ background-position:11px 10px;}
+.treeview-red li span a.n_all:hover{ background-position:11px -34px;}
+.treeview-red li span a.n_news{background-position:11px -80px;}
+.treeview-red li span a.n_news:hover{background-position:11px -126px;}
+.treeview-red li span a.n_notices{background-position:11px -171px;}
+.treeview-red li span a.n_notices:hover{background-position:11px -216px;}
+.treeview-red li span a.n_act{background-position:11px -305px;}
+.treeview-red li span a.n_act:hover{background-position:10px -261px;}
+.treeview-red li span a.n_guide{ background-position:11px -351px;}
+.treeview-red li span a.n_guide:hover{ background-position:11px -397px;}
+.treeview-red li span a.n_stip{background-position:11px -627px;}
+.treeview-red li span a.n_stip:hover{ background-position:11px -676px;}
+.treeview-red li span a.n_newbie{background-position:11px -724px;}
+.treeview-red li span a.n_newbie:hover{ background-position:9px -770px;}
+.treeview-red li span a.n_version{ background-position:11px -580px;}
+.treeview-red li span a.n_version:hover{background-position:11px -535px;}
+.treeview-red li span a.n_faq{ background-position:11px -816px;}
+.treeview-red li span a.n_faq:hover{background-position:11px -863px;}
+.treeview-red li span a.n_info{background-position:11px -626px;}
+.treeview-red li span a.n_info:hover{background-position:11px -674px;}
+.treeview-red li span a.n_support { background-position:-315px -286px; }
+.treeview-red li span a.n_support:hover { background-position:-315px -333px; }
+
+.treeview-red li span a.n_photo{ background-position:-316px 6px; }
+.treeview-red li span a.n_wallpaper{ background-position:-316px -84px;}
+.treeview-red li span a.n_screenshot{ background-position:-316px -186px;}
+
+.treeview-red li span a.n_photo:hover{ background-position:-316px -41px;}
+.treeview-red li span a.n_wallpaper:hover{ background-position:-316px -137px;}
+.treeview-red li span a.n_screenshot:hover{ background-position:-316px -237px;}

@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link rel="stylesheet" type="text/css" href="s.g321.it/website/ddt/css/style56eb.css" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="DDTank II" />
+<meta name="image" content="s.g321.it/manage/assets/images/uploadfiles/article_610.jpg" />
+
+<title>DDTank II - gutierry Ragezone</title>
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="s.g321.it/website/child/css/dialog.css" />
+
+<script type="text/javascript" src="s.g321.it/website/ddt/js/jQuery-1.4.2.min.js"></script>
+<script type="text/javascript" src="s.g321.it/website/ddt/js/swithable.js"></script>
+<script type="text/javascript" src="s.g321.it/website/ddt/js/based25e.js?v=213210"></script>
+<script type="text/javascript" src="s.g321.it/website/ddt/js/jquery.DMenu.js"></script>
+
+<script type="text/javascript" src="s.g321.it/website/child/js/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="s.g321.it/website/child/js/dialog.js"></script>
+<script type="text/javascript" src="s.g321.it/website/child/js/jcarousellite.js"></script>
+<script type="text/javascript" src="s.g321.it/website/child/js/phprpc_js/compressed/phprpc_client.js"></script>
+<script type="text/javascript" src="s.g321.it/website/child/js/ajax.js"></script>
+
+<script type="text/javascript" src="s.g321.it/website/public/js/facebook.js"></script>
+
+<script type="text/javascript" src="s.g321.it/website/child/js/cookies_func.js"></script>
+<script type="text/javascript" src="s.g321.it/website/child/js/google-analytics-header.js"></script>
+<script type="text/javascript">
+
+setAdInfo();//设置广告信息
+$(document).ready(function(){
+$(".tabs-2-trigger li").hover(function(){var aa=$(this).find("a").attr("href");$(".more").find("a").attr("href",aa);});
+})
+</script>
+<script type="text/javascript" src="script/mainsite.js"></script>
+<script type="text/javascript" src="script/gunny-index.js"></script>
+<script src="script/thickbox.js" type="text/javascript"></script>
+<script language="javascript"  type="text/javascript">
+    $(document).ready(function () {
+        $("#u").focus();
+        $("#p").keypress(function (e) {
+            if (e.keyCode == 13) {
+                //AjaxGet();
+                //document.frmLogin.submit();
+                //xmlhttpPost("createLogin.ashx");
+                checklogin();
+            }
+        });        
+    });
+    function checklogin() {
+        var err = 0;
+        if (document.getElementById("u").value == '') {
+            //alert('Vui lòng nhập tài khoản');
+            $("#Question").html('Você não digitou uma conta.');
+            err++;
+        }
+        else if (document.getElementById("p").value == '') {
+            //alert('Vui lòng nhập mật khẩu');
+            $("#Question").html('Você não digitou uma senha.');
+            err++;
+        }
+
+        if (err == 0)
+        //document.frmLogin.submit();
+            xmlhttpPost("createLogin.ashx");
+        //return true;
+        return false;
+    }
+	
+
+    function xmlhttpPost(strURL) {
+        var xmlHttpReq = false;
+        var self = this;
+        $("#Question").html('<img alt="" id="loading_img1" src="images/loading.gif" />');
+
+        // Mozilla/Safari
+        if (window.XMLHttpRequest) {
+            self.xmlHttpReq = new XMLHttpRequest();
+        }
+        // IE
+        else if (window.ActiveXObject) {
+            self.xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        self.xmlHttpReq.open('POST', strURL, true);
+        self.xmlHttpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        self.xmlHttpReq.onreadystatechange = function () {
+            if (self.xmlHttpReq.readyState == 4) {
+                updatepage(self.xmlHttpReq.responseText);
+            }
+        }
+        self.xmlHttpReq.send(getquerystring());
+    }
+
+    function getquerystring() {
+        var form = document.forms['frmLogin'];
+        var username = form.u.value;
+        var password = form.p.value;
+        qstr = 'username=' + escape(username) + '&password=' + escape(password);
+        return qstr;
+    }
+
+    function updatepage(str) {
+        if (str == "ok") {
+            location.replace("LoginGame.aspx")
+            //alert(str);
+        }
+        else
+            $("#Question").html(str);
+    }     
+    </script>
+</head>
+<body>
+
+<div class="top_banner">
+<!-- top -->
+
+<!-- top END -->
+
+<!-- banner -->
+<div class="serveropen"></div>
+<div class="header">
+<div class="banner">
+<!-- nav -->
+<div class="nav">
+<h1><a title="DDTank" href="#">DDTank II</a></h1>
+<ul id="main_menu">
+<li class="home"><a title="Inicio" href="index.html">Inicio</a></li>
+<li class="news"><a title="Registro" href="registro.html">Registro</a></li>
+<li class="commu"><a title="Recarga" href="recarga.html">Recarga</a></li>
+<li class="guide"><a title="Contato" href="contato.html">Contato</a></li>
+<li class="charge"><a title="Downs" href="downs.html">Downs</a></li>
+<li class="support"><a title="Fórum" href="#">Fórum</a></li>
+</ul>
+<div id="sub_nav" style="display:none;">
+<div class="sub_nav_box">
+<ul class="sub_news">
+<li><a href="#">All</a></li>
+<li><a href="#">News</a></li>
+<li><a href="#">Notices</a></li>
+<li><a href="#">Activities</a></li>
+</ul>
+<ul class="sub_support">
+<li><a href="support/game_version/590.html">Game Version</a></li>
+<li><a href="http://passport.game321.com/">Account Info</a></li>
+<li><a href="javascript:popUp('http://support.game321.com/visitor/index.php?_m=livesupport&amp;_a=emailchat&amp;departmentid=0')">Live Support</a></li>
+<li><a href="support/faq/account/591.html">FAQs</a></li>
+</ul>
+</div>
+</div>
+</div>
+<!-- nav END -->
+</div>
+</div><!-- banner END -->
+</div>
+
+
+<!-- container -->
+<div id="container" class="cfix">
+<!-- main -->
+<div class="main">
+<div class="col1">
+<div class="game_start"><a href="#" title="Novo aqui?" id="start_ddt">Novo Aqui?</a></div>
+<ul class="menu">
+<br><br><form id="frmLogin" name="frmLogin" method="post" action="">
+                            <div class="frm_dangnhap">
+<img src="images/lo.png" /><br>
+                                <input type="text" name="u" id="u" value="" class="txt_box"><br><br>
+<img src="images/senha.png" /><br>
+                                <input type="password" id="p" name="p" value="" class="txt_box"><br>
+								
+                            </div>
+                            <div class="frm_button">
+                                <input type="image" src="images/login.png" value="Fazer login" class="ChoiNgay" onclick="return checklogin();">
+                            </div>
+                            <a title="Esqueci senha" target="_blank" href="./auth/forgotpass.aspx?type=154&amp;eventid=63&amp;bannerid=104&amp;pid=49&amp;placeValuesBeforeTB_=savedValues&amp;TB_iframe=true&amp;height=430&amp;width=366">Esqueci minha senha</a>                  
+                            <div class="LuuY">
+                                <p class="TextWarning">
+                                </p>
+                            </div>
+                        </form><br>
+<li><a title="Registro" href="http://127.0.0.1/client/auth/register.aspx?pid=49&eventid=63&bannerid=732&type=154" target="_blank" ><img alt="Registro" src="s.g321.it/website/ddt/images/register.png" width="262" height="88" /></a></li>
+
+</ul>
+<div class="colright">
+<div class="r_top"></div>
+<div class="r_mid">
+<div class="pos">
+<h2 class="newbieguide"></h2>
+<div class="pos_nav">
+<div class="pos_nav_m">
+- Suporte -
+</div>
+</div>
+<!--pos_nav end-->
+</div>
+<!--pos end-->
+<div class="post">
+										<div class="nav_tab">
+<a class="choose" href="#">Formas de Contato</a>
+</div>			<h2>Para nos Contactar:</h2>
+<div class="test">
+<p style="text-align: center">
+	<img alt="The most popular webgame portal---Game321 webgame platform
+" src="http://www.positivoinformatica.com.br/www/uploads/locales/global/img/pict/img_suporteMain.jpg" style="width: 365px; height: 125px" /></p>
+<p>
+
+	<strong>Ente pelo nosso suporte online através desse Link: <a href="#seulink">Clique Aqui!</a></p>
+<p>
+Ou mande-nos um email para: seuemail@seuddtank.com.br
+</p></center></div>
+</div>
+</div>
+<div class="r_bot"></div>
+</div>
+</div>
+<!-- main_right END-->
+
+</div>
+</div>
+<!-- main END -->
+</div>
+<!-- container END -->
+
+<!-- footer -->
+<div class="cfix"></div>
+<!--footer-->
+<div id="footer">
+<div class="footer_logo cfix">
+<div class="footer_p"><p><a href="#sobre">Sobre nós</a> / <a href="#termos">Termos</a> / <a href="#Contato">Contato</a></p>
+<p>Copyright &copy 2013-2014 Ragezone Co., Ltda. Todos os direitos Reservados. </p></div>
+</div>
+<div class="footer_bg_box"></div>
+</div>
+<!--footer End-->
+<script type="text/javascript">
+
+window.onload=function(){
+if(document.getElementById("imgs")){
+var obj=document.getElementById("imgsss").getElementsByTagName("img");
+var a=document.getElementById("imgs");
+for(var i=0;i<obj.length;i++){
+a.src=obj[i].src;
+if(a.offsetHeight>96){
+obj[i].style.marginTop='-'+a.offsetHeight/10+'px';
+}
+}
+}else{
+$("#imgsss img").each(function(){
+var a=$(this).height();
+if(a>96){
+$(this).css({"margin-top":"-"+(a*0.1)+"px"})
+}
+});
+}
+}
+</script>
+<iframe style="display:none" name="xajax" id="xajax"><!-- used for cross domain ajax posting --></iframe>
+</body>
+
+</html>
+<!-- footer END -->
+</body>
+</html>
